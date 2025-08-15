@@ -21,34 +21,24 @@
 ### Minecraft Launcher  
 パスの例: `C:\Program Files\Minecraft\launcher.exe`
 
-### MineCRaft ModClient
-1. ~~[GitHub リポジトリ](https://github.com/mcr-2024b/MineCRaft_ModCliant)にアクセス~~ mod_settingfiles.zipをクリック
-2. ダウンロードマークをクリックしてダウンロード 
-3. .zipファイルを展開（解凍）
+### CurseForge 
+modの導入をサポートするアプリケーション。今回の環境では必須。
 
-### Java 8
-- インストールされていない場合は`JavaSetup8u421.exe`を実行してインストール
-
-### Forge 1.12.2
-- `forge-1.12.2-14.23.5.2860-installer.jar`を実行してインストール
 
 ## セットアップ手順
 
-1. **Forgeプロファイルの作成**
-   - Minecraft LauncherでForgeを一度起動し、すぐ終了してください
-   - ⚠️ パスを正しく指定しないと無意味なので注意してください
+1. **CurseForgeでmodpack導入**
+   - Home→Minecraft→import→ImportProfile .zipで同梱されている`mekanism_insane.zip`をインポート。
+   - 今後modpack入りのminecraftバージョンを起動する場合、Curseforgeから起動する必要あり。
 
-2. **Modファイルの配置**
-   - 生成されたModsフォルダに、ダウンロードしたZIPファイル内のすべてのmodファイルを配置
-
-3. **設定の調整**
+4. **設定の調整**
    - もう一度起動して個人用に設定を調整
 
 ## サーバーへの接続
 
 1. Minecraft内で「サーバーを追加（Add Server）」をクリック
 2. サーバーアドレスに指定したポートを入力  
-   例: `localhost:20100`
+   例: `127.0.0.1:20100`
 
 ---
 
