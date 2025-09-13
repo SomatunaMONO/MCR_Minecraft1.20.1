@@ -10,13 +10,19 @@
     winget install --id Cloudflare.cloudflared
     ```
 
-### MCR-minecraft-launcher.exe
+### modについて
+- Releaseページにてダウンロードしてください
+
+### mcr-minecraft.exe
+- ダンロード先をReleaseページに変更しました。
 - ダブルクリックで実行してください。
 - [WindowsによってPCが保護されました]と表示される場合は、「詳細情報」を押してそのまま実行してください。
 - 実行すると最初にMinecraftランチャーのパスを入力してください。
 - 次にポートを入力してください（デフォルト: 20100）。
-- ホスト名はデフォルトのままで大丈夫です(デフォルト: minecraft.nitmcr.f5.si) 。
+- ホスト名はminecraft.nitmcr.f5.si(mekanism_insane.zip)
+-          nominecraft.nitmcr.f5.si(のんびりサーバー)
 - .exeファイルを実行すると同じディレクトリに`config.json`ファイルが生成されます。
+- 複数のホスト名ランチャーパスの指定が可能になりました。
 
 ### Minecraft Launcher  
 パスの例: `C:\Program Files\Minecraft\launcher.exe`
@@ -26,6 +32,10 @@ modの導入をサポートするアプリケーション。今回の環境で�
 
 ### mekanism_insane.zip
 modの詰め合わせパック。Curseforgeに入れる。
+
+## のんびりサーバー
+1. 1.20.1-forge-47.4.0使用
+2. mod のんびりクラフト.zipこれを展開してmodフォルダの中に入れてください
 
 ## セットアップ手順
 
@@ -43,6 +53,10 @@ modの詰め合わせパック。Curseforgeに入れる。
    例: `127.0.0.1:20100`
 
 ---
+## サーバーについて
+- 2つのサーバーが立つようになりました
+1. 工業や農業modをいれたサーバーこちらはころころ構成を変えられればなと思います。
+2. のんびり系のサーバー普通の農業modやバイオーム追加系、移動系(鉄道や車など)入れたサーバーです。雰囲気を崩さないものであればmod追加のリクエストをしても大丈夫です。⚠相性などの関係で入らない場合もあります。
 
 ## トラブルシューティング
 

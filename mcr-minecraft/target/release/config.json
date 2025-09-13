@@ -1,0 +1,10 @@
+{
+  "launcher_paths": [
+    "C:\\XboxGames\\Minecraft Launcher\\Content\\Minecraft.exe"
+  ],
+  "local_addr": "127.0.0.1:20100",
+  "hostnames": [
+    "minecraft.nitmcr.f5.si",
+    "nobiminecraft.nitmcr.f5.si"
+  ]
+}
