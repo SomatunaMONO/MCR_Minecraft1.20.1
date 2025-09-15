@@ -20,7 +20,7 @@
 - 実行すると最初にMinecraftランチャーのパスを入力してください。
 - 次にポートを入力してください（デフォルト: 20100）。
 - ホスト名はminecraft.nitmcr.f5.si(mekanism_insane.zip)
--          nominecraft.nitmcr.f5.si(のんびりサーバー)
+-          nobiminecraft.nitmcr.f5.si(のんびりサーバー)
 - .exeファイルを実行すると同じディレクトリに`config.json`ファイルが生成されます。
 - 複数のホスト名ランチャーパスの指定が可能になりました。
 
