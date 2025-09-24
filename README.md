@@ -19,8 +19,8 @@
 - [WindowsによってPCが保護されました]と表示される場合は、「詳細情報」を押してそのまま実行してください。
 - 実行すると最初にMinecraftランチャーのパスを入力してください。
 - 次にポートを入力してください（デフォルト: 20100）。
-- 1 mekanism_insane, 2のんびりサーバー
 - ホスト名は
+- 1 mekanism_insane, 2のんびりサーバー
 1.      minecraft.nitmcr.f5.si
 2.      nobiminecraft.nitmcr.f5.si
 - .exeファイルを実行すると同じディレクトリに`config.json`ファイルが生成されます。
