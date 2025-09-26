@@ -21,8 +21,8 @@
 - 次にポートを入力してください（デフォルト: 20100）。
 - ホスト名は
 - 1 mekanism_insane, 2のんびりサーバー
-1.      minecraft.nitmcr.f5.si
-2.      nobiminecraft.nitmcr.f5.si
+1.     minecraft.nitmcr.f5.si
+2.     nobiminecraft.nitmcr.f5.si
 - .exeファイルを実行すると同じディレクトリに`config.json`ファイルが生成されます。
 - 複数のホスト名ランチャーパスの指定が可能になりました。
 
