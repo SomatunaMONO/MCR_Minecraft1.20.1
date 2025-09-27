@@ -2,8 +2,9 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use std::fs;
+use std::io::{BufRead, BufReader};
 use std::path::Path;
-use std::process::{Command, Child};
+use std::process::{Command, Child, Stdio};
 use std::sync::{Arc, Mutex};
 use std::time::Duration;
 use std::collections::VecDeque;
@@ -30,6 +31,30 @@ impl Default for Config {
 }
 
 const CONFIG_FILE: &str = "config.json";
+
+#[cfg(windows)]
+fn spawn_without_window(mut cmd: Command) -> std::io::Result<Child> {
+    use std::os::windows::process::CommandExt;
+    const CREATE_NO_WINDOW: u32 = 0x0800_0000;
+    cmd.creation_flags(CREATE_NO_WINDOW);
+    cmd.spawn()
+}
+
+#[cfg(not(windows))]
+fn spawn_without_window(cmd: Command) -> std::io::Result<Child> {
+    cmd.spawn()
+}
+
+fn invoke_ui<F>(ui_handle: slint::Weak<AppWindow>, f: F)
+where
+    F: FnOnce(AppWindow) + Send + 'static,
+{
+    let _ = slint::invoke_from_event_loop(move || {
+        if let Some(ui) = ui_handle.upgrade() {
+            f(ui);
+        }
+    });
+}
 
 // バリデーション関数
 fn validate_launcher_path(path: &str) -> Result<String, String> {
@@ -142,11 +167,16 @@ async fn start_launcher_async(
     }
     
     let launcher_result = if launcher_path.ends_with(".url") {
-        Command::new("cmd")
-            .args(&["/C", "start", "", &launcher_path])
-            .spawn()
+        let mut cmd = Command::new("cmd");
+        cmd.arg("/C")
+            .arg("start")
+            .arg("")
+            .arg("/B")
+            .arg(&launcher_path);
+        spawn_without_window(cmd)
     } else {
-        Command::new(&launcher_path).spawn()
+        let cmd = Command::new(&launcher_path);
+        spawn_without_window(cmd)
     };
 
     match launcher_result {
@@ -157,10 +187,10 @@ async fn start_launcher_async(
                 state_guard.add_log("ランチャーを起動しました".to_string());
             }
             
-            if let Some(ui) = ui_handle.upgrade() {
-                let logs = state.lock().unwrap().get_logs();
-                let _ = ui.set_log_output(logs.into());
-            }
+            let logs = state.lock().unwrap().get_logs();
+            invoke_ui(ui_handle.clone(), move |ui| {
+                ui.set_log_output(logs.clone().into());
+            });
         }
         Err(e) => {
             {
@@ -168,11 +198,11 @@ async fn start_launcher_async(
                 state_guard.add_log(format!("ランチャーの起動エラー: {}", e));
             }
             
-            if let Some(ui) = ui_handle.upgrade() {
-                let logs = state.lock().unwrap().get_logs();
-                let _ = ui.set_log_output(logs.into());
-                let _ = ui.set_is_running(false);
-            }
+            let logs = state.lock().unwrap().get_logs();
+            invoke_ui(ui_handle.clone(), move |ui| {
+                ui.set_log_output(logs.clone().into());
+                ui.set_is_running(false);
+            });
             return;
         }
     }
@@ -186,7 +216,8 @@ async fn start_launcher_async(
         state_guard.add_log(format!("cloudflaredを起動中: {}", hostname));
     }
 
-    match Command::new("cloudflared")
+    let mut cloudflared_cmd = Command::new("cloudflared");
+    cloudflared_cmd
         .args(&[
             "access",
             "tcp",
@@ -195,18 +226,88 @@ async fn start_launcher_async(
             "--url",
             &local_addr,
         ])
-        .spawn()
-    {
-        Ok(child) => {
+        .stdout(Stdio::piped())
+        .stderr(Stdio::piped());
+
+    match spawn_without_window(cloudflared_cmd) {
+        Ok(mut child) => {
+            let stdout = child.stdout.take();
+            let stderr = child.stderr.take();
             {
                 let mut state_guard = state.lock().unwrap();
                 state_guard.cloudflared_process = Some(child);
                 state_guard.add_log("cloudflaredを起動しました".to_string());
             }
-            
-            if let Some(ui) = ui_handle.upgrade() {
-                let logs = state.lock().unwrap().get_logs();
-                let _ = ui.set_log_output(logs.into());
+
+            let logs = state.lock().unwrap().get_logs();
+            invoke_ui(ui_handle.clone(), move |ui| {
+                ui.set_log_output(logs.clone().into());
+            });
+
+            if let Some(stdout) = stdout {
+                let state_clone = Arc::clone(&state);
+                let ui_handle_clone = ui_handle.clone();
+                std::thread::spawn(move || {
+                    let reader = BufReader::new(stdout);
+                    for line in reader.lines() {
+                        match line {
+                            Ok(line) => {
+                                let logs = {
+                                    let mut state_guard = state_clone.lock().unwrap();
+                                    state_guard.add_log(format!("cloudflared: {}", line));
+                                    state_guard.get_logs()
+                                };
+                                invoke_ui(ui_handle_clone.clone(), move |ui| {
+                                    ui.set_log_output(logs.clone().into());
+                                });
+                            }
+                            Err(e) => {
+                                let logs = {
+                                    let mut state_guard = state_clone.lock().unwrap();
+                                    state_guard.add_log(format!("cloudflared stdout 読み取りエラー: {}", e));
+                                    state_guard.get_logs()
+                                };
+                                invoke_ui(ui_handle_clone.clone(), move |ui| {
+                                    ui.set_log_output(logs.clone().into());
+                                });
+                                break;
+                            }
+                        }
+                    }
+                });
+            }
+
+            if let Some(stderr) = stderr {
+                let state_clone = Arc::clone(&state);
+                let ui_handle_clone = ui_handle.clone();
+                std::thread::spawn(move || {
+                    let reader = BufReader::new(stderr);
+                    for line in reader.lines() {
+                        match line {
+                            Ok(line) => {
+                                let logs = {
+                                    let mut state_guard = state_clone.lock().unwrap();
+                                    state_guard.add_log(format!("cloudflared: {}", line));
+                                    state_guard.get_logs()
+                                };
+                                invoke_ui(ui_handle_clone.clone(), move |ui| {
+                                    ui.set_log_output(logs.clone().into());
+                                });
+                            }
+                            Err(e) => {
+                                let logs = {
+                                    let mut state_guard = state_clone.lock().unwrap();
+                                    state_guard.add_log(format!("cloudflared stderr 読み取りエラー: {}", e));
+                                    state_guard.get_logs()
+                                };
+                                invoke_ui(ui_handle_clone.clone(), move |ui| {
+                                    ui.set_log_output(logs.clone().into());
+                                });
+                                break;
+                            }
+                        }
+                    }
+                });
             }
         }
         Err(e) => {
@@ -214,12 +315,12 @@ async fn start_launcher_async(
                 let mut state_guard = state.lock().unwrap();
                 state_guard.add_log(format!("cloudflaredの起動エラー: {}", e));
             }
-            
-            if let Some(ui) = ui_handle.upgrade() {
-                let logs = state.lock().unwrap().get_logs();
-                let _ = ui.set_log_output(logs.into());
-                let _ = ui.set_is_running(false);
-            }
+
+            let logs = state.lock().unwrap().get_logs();
+            invoke_ui(ui_handle.clone(), move |ui| {
+                ui.set_log_output(logs.clone().into());
+                ui.set_is_running(false);
+            });
         }
     }
 }
