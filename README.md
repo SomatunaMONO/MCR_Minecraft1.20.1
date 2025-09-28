@@ -55,6 +55,9 @@ modの詰め合わせパック。Curseforgeに入れる。
 - 9/19
 - MSD-forge-1.20.1-4.0.1-1.4.1
 - MTR-forge-4.0.1+1.20.1
+- 9/28
+- Oh The Biomes We've Gone
+- BA_BT
 2. ** 追加mod **
 - 9/19
 - create-1.20.1-0.5.1.j.jar
@@ -62,6 +65,7 @@ modの詰め合わせパック。Curseforgeに入れる。
 - urushi-1.20.1-6.5.4.jar
 - 9/25
 - Angel Block Renewed
+- 9/28
 #### 追加modは追加modフォルダの中に入っています。
 
 ### のんびりサーバー 一括破壊のconfigについて
