@@ -66,6 +66,17 @@ modの詰め合わせパック。Curseforgeに入れる。
 - 9/25
 - Angel Block Renewed
 - 9/28
+- CBMultipart-1.20.1-3.3.0.146-universal
+- CodeChickenLib-1.20.1-4.4.0.516-universal
+- ProjectRed-1.20.1-4.21.0-core
+- ProjectRed-1.20.1-4.21.0-expansion
+- ProjectRed-1.20.1-4.21.0-exploration
+- ProjectRed-1.20.1-4.21.0-fabrication
+- ProjectRed-1.20.1-4.21.0-illumination
+- ProjectRed-1.20.1-4.21.0-integration
+- ProjectRed-1.20.1-4.21.0-transmission
+- radium-mc1.20.1-0.12.4+git.26c9d8e
+
 #### 追加modは追加modフォルダの中に入っています。
 
 ### のんびりサーバー 一括破壊のconfigについて
