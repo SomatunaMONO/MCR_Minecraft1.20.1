@@ -12,12 +12,21 @@
 | diamond_pickaxe    | ダイアのツルハシ     |
 | golden_pickaxe     | 金のツルハシ         |
 | netherite_pickaxe  | ネザライトのツルハシ |
+| iron_shovel        | 鉄のシャベル         |
+| wooden_shovel      | 木のシャベル         |
+| stone_shovel       | 石のシャベル         |
+| diamond_shovel     | ダイヤのシャベル     |
+| golden_shovel      | 金のシャベル         |
+| netherite_shovel   | ネザライトのシャベル |
 | wooden_hoe         | 木のクワ             |
 | stone_hoe          | 石のクワ             |
 | golden_hoe         | 金のクワ             |
 | iron_hoe           | 鉄のクワ             |
 | diamond_hoe        | ダイアのクワ         |
 | netherite_hoe      | ネザライトのクワ     |
+| tconstruct:pickaxe | TConstructのピッケル |
+| tconstruct:shovel  | TConstructのシャベル |
+| tconstruct:hammer  | TConstructのハンマー |
 
 ### 2. 鉱石一覧 (blockIds)
 
@@ -54,6 +63,8 @@
 | deepslate_iron_ore     | 深層鉄鉱石              |
 | deepslate_lapis_ore    | 深層ラピスラズリ鉱石    |
 | deepslate_redstone_ore | 深層レッドストーン鉱石  |
+| gravel                 | 砂利                    |
+| clay                   | 粘土                    |
 
 ## **cutall**
 ### 1. ツール一覧 (itemIds)
