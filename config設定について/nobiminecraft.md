@@ -25,8 +25,6 @@
 | diamond_hoe        | ダイアのクワ         |
 | netherite_hoe      | ネザライトのクワ     |
 | tconstruct:pickaxe | TConstructのピッケル |
-| tconstruct:shovel  | TConstructのシャベル |
-| tconstruct:hammer  | TConstructのハンマー |
 
 ### 2. 鉱石一覧 (blockIds)
 
