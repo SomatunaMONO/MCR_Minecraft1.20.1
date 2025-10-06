@@ -58,6 +58,8 @@ modの詰め合わせパック。Curseforgeに入れる。
 - 9/28
 - Oh The Biomes We've Gone
 - BA_BT
+- 10/6
+- car-forge-1.20.1-1.0.34.jar
 2. ** 追加mod **
 - 9/19
 - create-1.20.1-0.5.1.j.jar
@@ -76,7 +78,19 @@ modの詰め合わせパック。Curseforgeに入れる。
 - ProjectRed-1.20.1-4.21.0-integration
 - ProjectRed-1.20.1-4.21.0-transmission
 - radium-mc1.20.1-0.12.4+git.26c9d8e
-
+- 10.6
+- ChickenChunks-1.20.1-2.10.0.100-universal.jar
+- chisels-and-bits-forge-1.4.148.jar
+- createdieselgenerators-1.20.1-1.2i.jar
+- Expanded UNUverse Pack [MTS] 1.20.1-22.18.0-2.1.3.jar
+- framework-forge-1.20.1-0.7.15.jar
+- gtcraft-2.0.1(1.20.1).jar
+- Immersive Vehicles-1.20.1-22.18.0-pre.jar
+- refurbished_furniture-forge-1.20.1-1.0.14.jar
+- UNU Civilian Pack [MTS] 1.20.1-22.18.0-6.7.1.jar
+- UNU Military Pack [MTS] 1.20.1-22.18.0-6.0.3.jar
+- UNU Parts Pack [MTS] 1.20.1-22.18.0-6.7.3.jar
+- 
 #### 追加modは追加modフォルダの中に入っています。
 
 ### のんびりサーバー 一括破壊のconfigについて
