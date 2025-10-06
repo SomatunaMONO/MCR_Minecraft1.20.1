@@ -1,7 +1,7 @@
 # mod一覧
 
-最終更新日: 2025年9月28日  
-合計: 70個のMod（jarファイル数ベース）
+最終更新日: 2025年10月6日  
+合計: 80個のMod（jarファイル数ベース）
 
 ### 1. 便利mod
 
@@ -26,8 +26,9 @@
 | Create | 歯車や機械を使った自動化システム |
 | Alternate Current | レッドストーン信号を最適化して高速化 |
 | Steam Rails | 蒸気機関車と線路システムを追加 |
+| Create Diesel Generators | Create用ディーゼル発電機を追加 |
 | Little Logistics | アイテム輸送システムを追加 |
-| Car | 車両を追加 |
+| ~~Car~~ | ~~車両を追加~~ |
 | TConstruct | カスタマイズ可能な武器・ツールを追加 |
 
 ### 3. 冒険・世界生成mod
@@ -64,6 +65,7 @@
 | Simply Light | 様々な照明ブロックを追加 |
 | Sakura | 桜の木や和風アイテムを追加 |
 | Urushi | 日本風の装飾アイテムを追加 |
+| Refurbished Furniture | リフォームされた家具を追加 |
 
 ### 6. ストレージ・インベントリmod
 
@@ -86,7 +88,25 @@
 |-------|----------|
 | SlashBlade | 日本刀系の武器を追加 |
 
-### 9. その他・特殊mod
+### 9. 建築・編集mod
+
+| mod名 | 簡易説明 |
+|-------|----------|
+| Chisels and Bits | ブロックを細かく削ったり追加したりできる |
+| ChickenChunks | チャンクローダーでエリアを常時読み込み |
+
+### 10. 車両・乗り物mod
+
+| mod名 | 簡易説明 |
+|-------|----------|
+| Immersive Vehicles (MTS) | 没入型車両システムの基盤 |
+| UNU Civilian Pack | MTS用民間車両パック |
+| UNU Military Pack | MTS用軍事車両パック |
+| UNU Parts Pack | MTS用パーツパック |
+| Expanded UNUverse Pack | MTS用拡張車両パック |
+| GTCraft | MTS用拡張車両パック |
+
+### 11. その他・特殊mod
 
 | mod名 | 簡易説明 |
 |-------|----------|
@@ -95,7 +115,7 @@
 | Neat | モブの体力バーを表示 |
 | Just Enough Resources | 鉱石の生成情報などを表示 |
 
-### 10. パフォーマンス・描画mod
+### 12. パフォーマンス・描画mod
 
 | mod名 | 簡易説明 |
 |-------|----------|
@@ -103,7 +123,7 @@
 | Oculus | シェーダー対応mod |
 | Radium | レンダリングの最適化・パフォーマンス改善 |
 
-### 11. レッドストーン・回路mod
+### 13. レッドストーン・回路mod
 
 | mod名 | 簡易説明 |
 |-------|----------|
@@ -115,7 +135,7 @@
 | ProjectRed - Expansion | 新素材や装飾要素を追加 |
 | ProjectRed - Exploration | 世界生成・ダンジョン要素を追加 |
 
-### 12. ライブラリmod（前提mod）
+### 14. ライブラリmod（前提mod）
 
 | mod名 | 簡易説明 |
 |-------|----------|
@@ -134,9 +154,10 @@
 | Sophisticated Core | Sophisticatedシリーズのコア機能 |
 | CodeChickenLib | ProjectRed等の前提ライブラリ |
 | CBMultipart | マルチパートブロックを提供するライブラリ |
+| Framework | 複数modの前提となるフレームワーク |
 
 ---
-**合計: 70個のMod（jarファイル）**  
+**合計: 80個のMod（jarファイル）**  
 **Minecraft バージョン: 1.20.1**  
 **Forge バージョン: 47.1.0**
 
