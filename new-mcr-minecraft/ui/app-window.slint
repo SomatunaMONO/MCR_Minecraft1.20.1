@@ -1,4 +1,4 @@
-import { Button, VerticalBox, HorizontalBox, ListView, LineEdit, TextEdit, ScrollView } from "std-widgets.slint";
+import { Button, VerticalBox, HorizontalBox, ListView, LineEdit, TextEdit, ScrollView, CheckBox } from "std-widgets.slint";
 
 export struct LauncherPath {
     path: string
@@ -28,6 +28,7 @@ export component AppWindow inherits Window {
     in-out property <string> status-message: "準備完了";
     in-out property <bool> is-running: false;
     in-out property <string> log-output: "";
+    in-out property <bool> command-only: false;
     in-out property <AppView> current-view: AppView.main;
 
     // Callbacks
@@ -41,6 +42,7 @@ export component AppWindow inherits Window {
     callback start-launcher();
     callback stop-processes();
     callback append-log(string);
+    callback toggle-command-only(bool);
 
     VerticalBox {
         // Navigation
@@ -274,12 +276,12 @@ export component AppWindow inherits Window {
                 right-panel := VerticalBox {
                     spacing: 12px;
 
-                    if root.launcher-paths.length > 0 && root.hostnames.length > 0: Rectangle {
+                    if (root.command-only && root.hostnames.length > 0) || (!root.command-only && root.launcher-paths.length > 0 && root.hostnames.length > 0): Rectangle {
                         background: #2e3b4e;
                         border-width: 2px;
                         border-color: #4da3ff;
                         border-radius: 12px;
-                        height: 140px;
+                        height: 160px;
 
                         VerticalBox {
                             padding: 18px;
@@ -290,7 +292,7 @@ export component AppWindow inherits Window {
                                 font-weight: 700;
                                 color: #ecf0f1;
                             }
-                            Text {
+                            if !root.command-only: Text {
                                 text: "ランチャー: " + root.launcher-paths[root.selected-launcher-index].path;
                                 font-size: 14px;
                                 color: #d5dde5;
@@ -306,6 +308,11 @@ export component AppWindow inherits Window {
                                 font-size: 14px;
                                 color: #d5dde5;
                             }
+                            Text {
+                                text: "モード: " + (root.command-only ? "コマンドのみ" : "ランチャー + コマンド");
+                                font-size: 14px;
+                                color: #d5dde5;
+                            }
                         }
                     }
 
@@ -318,12 +325,21 @@ export component AppWindow inherits Window {
                             color: #e2e9f5;
                         }
 
+                        CheckBox {
+                            text: "コマンドのみ実行（ランチャーを起動しない）";
+                            checked: root.command-only;
+                            toggled => {
+                                root.command-only = self.checked;
+                                root.toggle-command-only(self.checked);
+                            }
+                        }
+
                         HorizontalBox {
                             spacing: 12px;
                             Button {
                                 text: root.is-running ? "停止" : "開始";
                                 primary: true;
-                                enabled: root.launcher-paths.length > 0 && root.hostnames.length > 0;
+                                enabled: (root.command-only && root.hostnames.length > 0) || (!root.command-only && root.launcher-paths.length > 0 && root.hostnames.length > 0);
                                 clicked => {
                                     if root.is-running {
                                         root.stop-processes();
@@ -350,7 +366,9 @@ export component AppWindow inherits Window {
                         VerticalBox {
                             padding: 12px;
                             Text {
-                                text: root.launcher-paths.length == 0 || root.hostnames.length == 0 ? "ランチャーとホスト名を設定タブで追加してください。" : "開始ボタンでランチャーとcloudflaredを起動します。";
+                                text: root.command-only ? 
+                                    (root.hostnames.length == 0 ? "ホスト名を設定タブで追加してください。" : "開始ボタンでcloudflaredのみを起動します。") :
+                                    (root.launcher-paths.length == 0 || root.hostnames.length == 0 ? "ランチャーとホスト名を設定タブで追加してください。" : "開始ボタンでランチャーとcloudflaredを起動します。");
                                 font-size: 13px;
                                 color: #c4d0e2;
                                 wrap: word-wrap;
