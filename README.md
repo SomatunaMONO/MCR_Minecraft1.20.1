@@ -90,7 +90,7 @@ modの詰め合わせパック。Curseforgeに入れる。
 - UNU Civilian Pack [MTS] 1.20.1-22.18.0-6.7.1.jar
 - UNU Military Pack [MTS] 1.20.1-22.18.0-6.0.3.jar
 - UNU Parts Pack [MTS] 1.20.1-22.18.0-6.7.3.jar
-- 
+
 #### 追加modは追加modフォルダの中に入っています。
 
 ### のんびりサーバー 一括破壊のconfigについて
