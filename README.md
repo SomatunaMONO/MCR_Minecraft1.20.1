@@ -78,7 +78,7 @@ modの詰め合わせパック。Curseforgeに入れる。
 - ProjectRed-1.20.1-4.21.0-integration
 - ProjectRed-1.20.1-4.21.0-transmission
 - radium-mc1.20.1-0.12.4+git.26c9d8e
-- 10.6
+- 10/6
 - ChickenChunks-1.20.1-2.10.0.100-universal.jar
 - chisels-and-bits-forge-1.4.148.jar
 - createdieselgenerators-1.20.1-1.2i.jar
