@@ -94,7 +94,8 @@ modの詰め合わせパック。Curseforgeに入れる。
 #### 追加modは追加modフォルダの中に入っています。
 
 ### のんびりサーバー 一括破壊のconfigについて
-1. 現状はデフォルトのものしか一括破壊に対応させていません。(ID確認して打つのがめんどくさい)
+- [config](https://github.com/SomatunaMONO/MCR_Minecraft1.20.1/blob/main/config%E8%A8%AD%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/nobiminecraft.md)
+- 上記リンク先にてご確認ください
 
 ## サーバーへの接続
 
