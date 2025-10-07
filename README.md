@@ -14,7 +14,7 @@
 - ReleaseページのModfileにてダウンロードしてください
 
 ### mcr-minecraft.exe
-- ダンロード先をReleaseページに変更しました。
+- [ダンロード先](https://github.com/SomatunaMONO/MCR_Minecraft1.20.1/releases/tag/4.0.exe)
 - ダブルクリックで実行してください。
 - [WindowsによってPCが保護されました]と表示される場合は、「詳細情報」を押してそのまま実行してください。
 - 実行すると最初にMinecraftランチャーのパスを入力してください。
