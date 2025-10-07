@@ -47,7 +47,7 @@ modの詰め合わせパック。Curseforgeに入れる。
 ## セットアップ手順(のんびりサーバー版)
 1. 1.20.1-forge-47.4.0をインストールしてください。
 2. 一回マインクラフトで1.20.1-forge-47.4.0を実行してください。⚠一度実行しないと必要なフォルダが生成されません。
-3. [default_ver5.zip](https://github.com/SomatunaMONO/MCR_Minecraft1.20.1/releases/tag/mod_nobi_change_ver5)これを展開してmodフォルダの中に入れてください。
+3. [default_ver5.1.zip](https://github.com/SomatunaMONO/MCR_Minecraft1.20.1/releases/tag/mod_nobi_change_ver5)これを展開してmodフォルダの中に入れてください。
 4. マインクラフトを実行してください。
 
 ## mod変更お知らせ(のんびりサーバー版)
@@ -90,6 +90,8 @@ modの詰め合わせパック。Curseforgeに入れる。
 - UNU Civilian Pack [MTS] 1.20.1-22.18.0-6.7.1.jar
 - UNU Military Pack [MTS] 1.20.1-22.18.0-6.0.3.jar
 - UNU Parts Pack [MTS] 1.20.1-22.18.0-6.7.3.jar
+- 10/7
+- potions_backport-1.0.0-forge-1.20.1.jar
 
 #### 追加modは追加modフォルダの中に入っています。
 
