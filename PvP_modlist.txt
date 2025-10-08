@@ -1,0 +1,10 @@
+embeddium軽量化
+tacz銃
+Just Enough Itemsレシピ
+Alternate Current レッドストーン処理軽減
+Radium Reforged サーバー軽量化
+FTB Ultimine 一括破壊
+Ender IO 工業
+Mekanism 工業
+Sophisticated Backpacks バックパック
+PneumaticCraft: Repressurized 工業
