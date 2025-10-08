@@ -1,3 +1,4 @@
+mod確定
 embeddium軽量化
 tacz銃
 Just Enough Itemsレシピ
@@ -8,3 +9,9 @@ Ender IO 工業
 Mekanism 工業
 Sophisticated Backpacks バックパック
 PneumaticCraft: Repressurized 工業
+mod検討中
+Botany Pots
+Botany Pots Tiers
+GVCR3
+Additional Enchanted Miner
+Mana and Artifice
