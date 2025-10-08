@@ -1,7 +1,7 @@
 # mod一覧
 
-最終更新日: 2025年10月6日  
-合計: 80個のMod（jarファイル数ベース）
+最終更新日: 2025年10月7日  
+合計: 81個のMod（jarファイル数ベース）
 
 ### 1. 便利mod
 
@@ -114,6 +114,7 @@
 | Touhou Little Maid | 東方Projectのメイドを追加 |
 | Neat | モブの体力バーを表示 |
 | Just Enough Resources | 鉱石の生成情報などを表示 |
+| potions_backport | 1.21のポーションを追加 |
 
 ### 12. パフォーマンス・描画mod
 
