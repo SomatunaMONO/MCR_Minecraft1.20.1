@@ -9,9 +9,11 @@ Ender IO 工業
 Mekanism 工業
 Sophisticated Backpacks バックパック
 PneumaticCraft: Repressurized 工業
-mod検討中
 Botany Pots
 Botany Pots Tiers
-GVCR3
+AE2
+pro2
 Additional Enchanted Miner
-Mana and Artifice
+
+mod検討中
+
