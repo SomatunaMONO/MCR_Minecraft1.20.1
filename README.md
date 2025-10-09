@@ -36,6 +36,7 @@ modの導入をサポートするアプリケーション。今回の環境で�
 modの詰め合わせパック。Curseforgeに入れる。
 
 ## セットアップ手順(mekanism_insane.zip版)
+<p>PvPサーバーに移行予定
 
 1. **CurseForgeでmodpack導入**
    - Home→Minecraft→import→ImportProfile .zipで同梱されている`mekanism_insane.zip`をインポート。
