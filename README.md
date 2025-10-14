@@ -48,7 +48,7 @@ modの詰め合わせパック。Curseforgeに入れる。
 ## セットアップ手順(のんびりサーバー版)
 1. 1.20.1-forge-47.4.0をインストールしてください。
 2. 一回マインクラフトで1.20.1-forge-47.4.0を実行してください。⚠一度実行しないと必要なフォルダが生成されません。
-3. [default_ver5.1.zip](https://github.com/SomatunaMONO/MCR_Minecraft1.20.1/releases/tag/mod_nobi_change_ver5)これを展開してmodフォルダの中に入れてください。
+3. [default_ver6.zip](https://github.com/SomatunaMONO/MCR_Minecraft1.20.1/releases/tag/mod_nobi_change_ver6)これを展開してmodフォルダの中に入れてください。
 4. マインクラフトを実行してください。
 
 ## mod変更お知らせ(のんびりサーバー版)
