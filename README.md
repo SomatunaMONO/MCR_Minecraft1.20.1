@@ -93,7 +93,22 @@ modの詰め合わせパック。Curseforgeに入れる。
 - UNU Parts Pack [MTS] 1.20.1-22.18.0-6.7.3.jar
 - 10/7
 - potions_backport-1.0.0-forge-1.20.1.jar
-
+- 10/14
+- architectury-9.2.14-forge.jar
+- CraftTweaker-forge-1.20.1-14.0.59.jar
+- mcjtylib-1.20-8.0.7.jar 
+- notenoughwands-1.20-6.0.2.jar
+- rhino-forge-2001.2.3-build.10.jar
+3. ** バージョン変更mod **
+- 10/14
+- urushi-1.20.1-6.5.4.jar → urushi-1.20.1-6.6.1.jar
+4. ** easy_recipe.zsについて **
+- recipeの一部簡易化のためのscriptsです。
+- Scripts フォルダの設定
+1. Minecraft 終了後、ワークスペース内に `scripts` フォルダが生成されます
+2. 生成された `scripts` フォルダに `easy_recipe.zs` ファイルを配置してください
+3. 再度 Minecraft を起動して、スクリプトが正しく読み込まれることを確認してください
+-  [easy_recipe.zs](https://github.com/SomatunaMONO/MCR_Minecraft1.20.1/blob/main/%E8%BF%BD%E5%8A%A0mod/10%E6%9C%8814%E6%97%A5/easy_recipe.zs)はzipファイルの中にあります。
 #### 追加modは追加modフォルダの中に入っています。
 
 ### のんびりサーバー 一括破壊のconfigについて
