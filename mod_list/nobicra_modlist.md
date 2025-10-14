@@ -1,7 +1,7 @@
 # mod一覧
 
-最終更新日: 2025年10月7日  
-合計: 81個のMod（jarファイル数ベース）
+最終更新日: 2025年10月14日  
+合計: 87個のMod（jarファイル数ベース）
 
 ### 1. 便利mod
 
@@ -94,6 +94,7 @@
 |-------|----------|
 | Chisels and Bits | ブロックを細かく削ったり追加したりできる |
 | ChickenChunks | チャンクローダーでエリアを常時読み込み |
+| Not Enough Wands | 建築補助用の魔法の杖を追加 |
 
 ### 10. 車両・乗り物mod
 
@@ -114,9 +115,16 @@
 | Touhou Little Maid | 東方Projectのメイドを追加 |
 | Neat | モブの体力バーを表示 |
 | Just Enough Resources | 鉱石の生成情報などを表示 |
-| potions_backport | 1.21のポーションを追加 |
+| Potions Backport | 新しいバージョンのポーション効果を追加 |
 
-### 12. パフォーマンス・描画mod
+### 12. カスタマイズ・スクリプトmod
+
+| mod名 | 簡易説明 |
+|-------|----------|
+| CraftTweaker | レシピやゲーム要素をカスタマイズ |
+| KubeJS | JavaScriptでゲーム内容をカスタマイズ |
+
+### 13. パフォーマンス・描画mod
 
 | mod名 | 簡易説明 |
 |-------|----------|
@@ -124,7 +132,7 @@
 | Oculus | シェーダー対応mod |
 | Radium | レンダリングの最適化・パフォーマンス改善 |
 
-### 13. レッドストーン・回路mod
+### 14. レッドストーン・回路mod
 
 | mod名 | 簡易説明 |
 |-------|----------|
@@ -136,7 +144,7 @@
 | ProjectRed - Expansion | 新素材や装飾要素を追加 |
 | ProjectRed - Exploration | 世界生成・ダンジョン要素を追加 |
 
-### 14. ライブラリmod（前提mod）
+### 15. ライブラリmod（前提mod）
 
 | mod名 | 簡易説明 |
 |-------|----------|
@@ -156,9 +164,12 @@
 | CodeChickenLib | ProjectRed等の前提ライブラリ |
 | CBMultipart | マルチパートブロックを提供するライブラリ |
 | Framework | 複数modの前提となるフレームワーク |
+| Architectury | クロスプラットフォーム対応ライブラリ |
+| McJtyLib | McJty系modの前提ライブラリ |
+| Rhino | JavaScriptエンジンライブラリ |
 
 ---
-**合計: 80個のMod（jarファイル）**  
+**合計: 87個のMod（jarファイル）**  
 **Minecraft バージョン: 1.20.1**  
 **Forge バージョン: 47.1.0**
 
