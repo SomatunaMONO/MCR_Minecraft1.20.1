@@ -81,6 +81,7 @@
 |-------|----------|
 | Alex's Mobs | 新しい動物を大量追加 |
 | Citadel | Alex's Mobsの前提mod |
+| lexoticbirds | 動物追加mod |
 
 ### 8. 武器・戦闘mod
 
@@ -116,6 +117,7 @@
 | Neat | モブの体力バーを表示 |
 | Just Enough Resources | 鉱石の生成情報などを表示 |
 | Potions Backport | 新しいバージョンのポーション効果を追加 |
+| cosmeticarmorreworked | 防具非表示 |
 
 ### 12. カスタマイズ・スクリプトmod
 
