@@ -1,7 +1,7 @@
 # mod一覧
 
-最終更新日: 2025年10月14日  
-合計: 87個のMod（jarファイル数ベース）
+最終更新日: 2025年11月27日  
+合計: 109個のMod（jarファイル数ベース）
 
 ### 1. 便利mod
 
@@ -18,6 +18,7 @@
 | JEI | アイテムのレシピを確認できる |
 | JEI Integration | JEIの表示・連携機能を強化 |
 | JourneyMap | ミニマップとワールドマップを表示 |
+| FTB Ultimine | 複数ブロックを一度に採掘 |
 
 ### 2. 技術・工業mod
 
@@ -30,6 +31,11 @@
 | Little Logistics | アイテム輸送システムを追加 |
 | ~~Car~~ | ~~車両を追加~~ |
 | TConstruct | カスタマイズ可能な武器・ツールを追加 |
+| Industrial Foregoing | 自動化・工業化システムを追加 |
+| Mekanism | 高度な機械・エネルギーシステムを追加 |
+| Mekanism Generators | Mekanism用発電機を追加 |
+| Mekanism Upgrades Reborn | Mekanismのアップグレード機能を拡張 |
+| Integrated Dynamics | 高度な自動化・論理回路システム |
 
 ### 3. 冒険・世界生成mod
 
@@ -45,6 +51,10 @@
 | YUNG's Bridges | 橋の構造物を追加 |
 | YUNG's Extras | 追加の構造物 |
 | ~~BA_BT~~ | ~~バトルタワーを追加するダンジョンMod~~ |
+| Tectonic | 地形生成を改良 |
+| Lithostitched | バイオームと地形生成を拡張 |
+| Epic Terrain | 壮大な地形を生成 |
+| Exotic Birds | エキゾチックな鳥を追加 |
 
 ### 4. 食べ物・料理mod
 
@@ -74,6 +84,7 @@
 | Sophisticated Backpacks | 高機能なバックパックを追加 |
 | Sophisticated Storage | 高機能なストレージシステム |
 | Curios | アクセサリースロットを追加 |
+| Storage Drawers | 引き出し型の収納ブロックを追加 |
 
 ### 7. 動物・生物mod
 
@@ -81,7 +92,6 @@
 |-------|----------|
 | Alex's Mobs | 新しい動物を大量追加 |
 | Citadel | Alex's Mobsの前提mod |
-| lexoticbirds | 動物追加mod |
 
 ### 8. 武器・戦闘mod
 
@@ -117,7 +127,14 @@
 | Neat | モブの体力バーを表示 |
 | Just Enough Resources | 鉱石の生成情報などを表示 |
 | Potions Backport | 新しいバージョンのポーション効果を追加 |
-| cosmeticarmorreworked | 防具非表示 |
+| Just Enough Mekanism Multiblocks | Mekanismのマルチブロック構造を表示 |
+| CC:Tweaked | プログラミング可能なコンピューターを追加 |
+| Cosmetic Armor Reworked | 見た目用の防具スロットを追加 |
+| Endless | ゲームプレイ要素を拡張 |
+| Torchmaster | 湧き潰し用の特殊な松明を追加 |
+| Petrolpark | Createアドオン（化学・工業要素） |
+| Petrols Parts | Petrolpark用の追加パーツ |
+| TC Redstone | TConstruct用レッドストーン連携機能 |
 
 ### 12. カスタマイズ・スクリプトmod
 
@@ -133,6 +150,9 @@
 | Embeddium | 描画パフォーマンスを向上 |
 | Oculus | シェーダー対応mod |
 | Radium | レンダリングの最適化・パフォーマンス改善 |
+| Entity Culling | 見えないエンティティの描画を最適化 |
+| Ferrite Core | メモリ使用量を削減 |
+| ModernFix | 様々な最適化とバグ修正 |
 
 ### 14. レッドストーン・回路mod
 
@@ -169,9 +189,13 @@
 | Architectury | クロスプラットフォーム対応ライブラリ |
 | McJtyLib | McJty系modの前提ライブラリ |
 | Rhino | JavaScriptエンジンライブラリ |
+| FTB Library | FTB系modの前提ライブラリ |
+| Titanium | Industrial Foregoing等の前提ライブラリ |
+| Cyclops Core | Integrated Dynamics等の前提ライブラリ |
+| Common Capabilities | modの機能連携を提供するライブラリ |
 
 ---
-**合計: 87個のMod（jarファイル）**  
+**合計: 109個のMod（jarファイル）**  
 **Minecraft バージョン: 1.20.1**  
 **Forge バージョン: 47.1.0**
 
