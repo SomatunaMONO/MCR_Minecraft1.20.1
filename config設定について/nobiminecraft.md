@@ -18,13 +18,6 @@
 | diamond_shovel     | ダイヤのシャベル     |
 | golden_shovel      | 金のシャベル         |
 | netherite_shovel   | ネザライトのシャベル |
-| wooden_hoe         | 木のクワ             |
-| stone_hoe          | 石のクワ             |
-| golden_hoe         | 金のクワ             |
-| iron_hoe           | 鉄のクワ             |
-| diamond_hoe        | ダイアのクワ         |
-| netherite_hoe      | ネザライトのクワ     |
-| tconstruct:pickaxe | TConstructのピッケル |
 
 ### 2. 鉱石一覧 (blockIds)
 
